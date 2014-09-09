@@ -53,8 +53,10 @@
       
       for(var i = 0; i < moduleElements.length; i++) {
           var moduleElement = moduleElements[i];
-          var module = modules[i].replace(/ /g,'').split(",");
-          angular.bootstrap(moduleElement, module);
+          if (typeof(modules[i]) != 'undefined') {
+            var module = modules[i].replace(/ /g,'').split(",");
+            angular.bootstrap(moduleElement, module);
+          }
       }
   }
 

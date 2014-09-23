@@ -40,7 +40,7 @@
               if(element.attributes) {
                   for (var attrName in element.attributes) {
                       if(attrName == "length") continue;
-                      var attr = { name: attrName, value: element.attributes[attrName].nodeValue };
+                      var attr = { name: attrName, value: element.attributes[attrName].value };
                       
                       if (names[attr.name]) {
                           moduleElements.push(element);
